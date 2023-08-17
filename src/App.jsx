@@ -30,11 +30,12 @@ class App extends React.Component {
   handleFilteredContacts = (event) =>{
     console.log(event.target.value);
     this.setState({filter: event.target.value.toLowerCase()})
-    
-
   }
   render(){
-    const {contacts, name, filter} = this.state
+    const {contacts, name, filter} = this.state;
+    const filteredContacts = contacts.filter(contact => contact.name.toLowerCase().includes(filter.toLowerCase()));
+    console.log(filteredContacts);
+    
     return(
       <div>
         <h1>Phone Book</h1>
@@ -73,7 +74,12 @@ class App extends React.Component {
           </label>
         </div>
         {filter !== "" ? 
-        (<h2>Filter is not empty</h2>): 
+        ( <div>
+          <ul>
+            {filteredContacts.map(contact => {
+              return(<li key={contact.id}>{contact.name}: {contact.number}</li>)})}
+          </ul>
+        </div>): 
         (contacts.length > 0 &&  (
           <div>
             <ul>
