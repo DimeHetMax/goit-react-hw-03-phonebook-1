@@ -12,6 +12,13 @@ class App extends React.Component {
   }
   handleForm = (event) =>{
     event.preventDefault()
+    const {contacts, name}= this.state
+    const existingContacts = contacts.find(contact => contact.name.toLowerCase().includes(name.toLocaleLowerCase()))
+    if(existingContacts){
+      alert(`${existingContacts.name} exists in your contacts `)
+      return
+    }
+  
     const modelId = nanoid() 
     this.setState(prevState =>{
       return({
@@ -96,22 +103,4 @@ class App extends React.Component {
   
 }
 
-export default App
-
-
-
-// {contacts.length > 0 &&  (
-//   <div>
-//   <h2>Contacts</h2>
-//     <div>
-//       <label>
-//         Find contacts by name
-//         <input type="text" onChange={this.handleFilteredContacts}/>
-//       </label>
-//     </div>
-//     <ul>
-//       {contacts.map(contact => {
-//         return(<li key={contact.id}>{contact.name}: {contact.number}</li>)})}
-//     </ul>
-//   </div>
-// )}
+export default App;
