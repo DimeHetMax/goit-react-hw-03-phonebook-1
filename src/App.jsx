@@ -25,7 +25,6 @@ class App extends React.Component {
     }
     const modelId = nanoid() 
     this.setState(prevState =>{
-      console.log(prevState);
       return({
         contacts:[... prevState.contacts, {name: prevState.name, number: prevState.number, id: modelId}],
        name:"",
@@ -35,7 +34,6 @@ class App extends React.Component {
     event.target.reset();
   }
   handleFilteredContacts = (event) =>{
-    console.log(event.target.value);
     this.setState({filter: event.target.value.toLowerCase()})
   }
   deleteContact =(id)=>{
