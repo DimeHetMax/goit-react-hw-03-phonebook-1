@@ -15,10 +15,12 @@
 }
 ul{
   text-align: left;
+  padding: 0;
 }
-/* li{
-  list-style: none;
-} */
+li{
+  display: flex;
+  justify-content: space-between;
+}
 a {
   font-weight: 500;
   color: #646cff;
