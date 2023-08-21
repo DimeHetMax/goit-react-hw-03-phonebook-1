@@ -5,6 +5,10 @@
   "type": "module",
   "homepage": "https://DimeHetMax.github.io/goit-react-hw-03-phonebook-1/",
   "scripts": {
+    "start": "react-scripts start",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lint:js": "eslint src/**/*.{js,jsx}",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
@@ -13,6 +17,7 @@
   },
   "dependencies": {
     "nanoid": "^4.0.2",
+    "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

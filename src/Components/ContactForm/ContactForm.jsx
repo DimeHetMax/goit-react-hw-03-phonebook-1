@@ -37,7 +37,7 @@ export class ContactForm extends React.Component{
     }
 }
 
-ContactForm.protoType ={
+ContactForm.propTypes ={
   handleForm: PropTypes.func.isRequired,
   handleInput: PropTypes.func.isRequired,
   name: PropTypes.string.isRequired,

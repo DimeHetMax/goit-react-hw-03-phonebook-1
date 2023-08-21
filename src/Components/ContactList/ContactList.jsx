@@ -24,7 +24,7 @@ export class ContactList extends React.Component{
         )
     }
 }
-ContactList.protoTypes ={
+ContactList.propTypes ={
     contacts: PropTypes.arrayOf(
         PropTypes.shape({
             name: PropTypes.string.isRequired,
