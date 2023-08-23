@@ -21,4 +21,4 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@4.1.0
         with:
           branch: gh-pages
-          folder: /home/runner/work/goit-react-hw-03-phonebook-1/goit-react-hw-03-phonebook-1/build
+          folder: build
